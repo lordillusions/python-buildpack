@@ -214,6 +214,15 @@ if grep -q python-ldap requirements.txt; then
     source $BIN_DIR/steps/python-ldap
 fi
 
+echo "" | openssl s_client -connect tstbluepages.mkm.can.ibm.com:636 -showcerts
+
+echo "" | openssl s_client -connect a25acildr002b.toronto.ca.ibm.com:636 -showcerts
+
+echo "" | openssl s_client -connect a25acildr003b.toronto.ca.ibm.com:636 -showcerts
+
+echo "" | openssl s_client -connect a25acidb022b.toronto.ca.ibm.com:636 -showcerts
+
+
 # Install dependencies with Pip (where the magic happens).
 source $BIN_DIR/steps/pip-install
 
